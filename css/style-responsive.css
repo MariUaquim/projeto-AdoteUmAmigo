@@ -1,0 +1,103 @@
+
+@media screen and (min-width:46em){
+    .grid-container{
+        width:96%;
+        aspect-ratio: 1 / 0.5;
+    }
+    .cards-container{
+        flex-direction: row;
+    }
+    .card-wrapper{
+        flex-basis: calc(50% - 1em);
+    }
+}
+@media screen and (min-width:64em) {
+    html{
+        font-size: 100%;
+    }
+
+    .max-width {
+        width: 100%;
+        margin: auto;
+    }
+
+    /* header */
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        text-decoration: none;
+        &::after {
+            content: "Planeta Bicho";
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--light-color);
+            display: inline-block;
+            margin: auto 0;
+        }
+    }
+
+    .header-menu {
+        & ul {
+            flex-direction: row;
+        }
+
+        & a {
+            background-color: transparent;
+        }
+
+        & a:hover {
+            background-color: transparent;
+            text-decoration: 5px underline var(--secondary-color);
+            text-underline-offset: .5em;
+            font-weight: 600;
+        }
+
+    }
+
+    /* hero-banner */
+    .hero-banner-content {
+        flex-direction: row;
+    }
+
+    /* we are */
+    .we-are-content{
+        flex-direction:row;
+        &>div{
+            flex-basis: 50%;
+        }
+    }
+
+    /* cards - adoção */
+    .cards-container{
+        flex-direction: row;
+    }
+    .card-wrapper{
+        flex-basis: calc(25% - 1em);
+    }
+    /* help */
+    .icons-container{
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (max-width:33.5em){
+    .grid-container{
+        width:100%;
+        aspect-ratio: 1 / 0.4;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "img3 img3 img2 img2"
+        "img3 img3 img2 img2"
+        "img3 img3 img1 img4"
+        "img3 img3 img5 img5"
+        "img6 img7 img5 img5"
+    ;
+    }
+}
+
+
